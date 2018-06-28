@@ -1,0 +1,231 @@
+I, [2018-06-28T10:05:54.270994 #28788]  INFO -- default-ubuntu-1204: -----> Cleaning up any prior instances of <default-ubuntu-1204>
+I, [2018-06-28T10:05:54.271581 #28788]  INFO -- default-ubuntu-1204: -----> Destroying <default-ubuntu-1204>...
+I, [2018-06-28T10:05:54.381903 #28788]  INFO -- default-ubuntu-1204: UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+I, [2018-06-28T10:05:54.381985 #28788]  INFO -- default-ubuntu-1204: root                27744               27729               0                   10:03               ?                   00:00:00            /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid
+I, [2018-06-28T10:05:54.382010 #28788]  INFO -- default-ubuntu-1204: root                28694               27744               0                   10:03               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:05:54.382165 #28788]  INFO -- default-ubuntu-1204: 33                  28696               28694               0                   10:03               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:05:54.382186 #28788]  INFO -- default-ubuntu-1204: 33                  28697               28694               0                   10:03               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:05:54.382203 #28788]  INFO -- default-ubuntu-1204: 33                  28698               28694               0                   10:03               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:05:54.665589 #28788]  INFO -- default-ubuntu-1204: edb37b821cc42de3657b9600551818690254f72efa376d313ecde2b159df7f9d
+I, [2018-06-28T10:05:55.089850 #28788]  INFO -- default-ubuntu-1204: edb37b821cc42de3657b9600551818690254f72efa376d313ecde2b159df7f9d
+I, [2018-06-28T10:05:55.102736 #28788]  INFO -- default-ubuntu-1204: Finished destroying <default-ubuntu-1204> (0m0.83s).
+I, [2018-06-28T10:05:55.103293 #28788]  INFO -- default-ubuntu-1204: -----> Testing <default-ubuntu-1204>
+I, [2018-06-28T10:05:55.103429 #28788]  INFO -- default-ubuntu-1204: -----> Creating <default-ubuntu-1204>...
+I, [2018-06-28T10:05:55.202518 #28788]  INFO -- default-ubuntu-1204: Sending build context to Docker daemon  123.4kB
+I, [2018-06-28T10:05:55.451896 #28788]  INFO -- default-ubuntu-1204: Step 1/17 : FROM ubuntu:12.04
+I, [2018-06-28T10:05:55.451972 #28788]  INFO -- default-ubuntu-1204:  ---> 5b117edd0b76
+I, [2018-06-28T10:05:55.452001 #28788]  INFO -- default-ubuntu-1204: Step 2/17 : RUN dpkg-divert --local --rename --add /sbin/initctl
+I, [2018-06-28T10:05:55.452470 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.452503 #28788]  INFO -- default-ubuntu-1204:  ---> a3b63c403029
+I, [2018-06-28T10:05:55.452522 #28788]  INFO -- default-ubuntu-1204: Step 3/17 : RUN ln -sf /bin/true /sbin/initctl
+I, [2018-06-28T10:05:55.453469 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.453811 #28788]  INFO -- default-ubuntu-1204:  ---> caae7cc92320
+I, [2018-06-28T10:05:55.454155 #28788]  INFO -- default-ubuntu-1204: Step 4/17 : ENV DEBIAN_FRONTEND noninteractive
+I, [2018-06-28T10:05:55.455167 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.455414 #28788]  INFO -- default-ubuntu-1204:  ---> 7429aa963133
+I, [2018-06-28T10:05:55.455762 #28788]  INFO -- default-ubuntu-1204: Step 5/17 : ENV container docker
+I, [2018-06-28T10:05:55.456747 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.457014 #28788]  INFO -- default-ubuntu-1204:  ---> 10beb8b1e818
+I, [2018-06-28T10:05:55.457428 #28788]  INFO -- default-ubuntu-1204: Step 6/17 : RUN apt-get update
+I, [2018-06-28T10:05:55.458419 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.458641 #28788]  INFO -- default-ubuntu-1204:  ---> 93cc95d31093
+I, [2018-06-28T10:05:55.459070 #28788]  INFO -- default-ubuntu-1204: Step 7/17 : RUN apt-get install -y sudo openssh-server curl lsb-release
+I, [2018-06-28T10:05:55.460007 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.460236 #28788]  INFO -- default-ubuntu-1204:  ---> 66a421e562a5
+I, [2018-06-28T10:05:55.460600 #28788]  INFO -- default-ubuntu-1204: Step 8/17 : RUN if ! getent passwd kitchen; then                 useradd -d /home/kitchen -m -s /bin/bash -p '*' kitchen;               fi
+I, [2018-06-28T10:05:55.461617 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.461958 #28788]  INFO -- default-ubuntu-1204:  ---> cb3e49342b62
+I, [2018-06-28T10:05:55.462235 #28788]  INFO -- default-ubuntu-1204: Step 9/17 : RUN echo "kitchen ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+I, [2018-06-28T10:05:55.463161 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.463381 #28788]  INFO -- default-ubuntu-1204:  ---> 67a25b365fdb
+I, [2018-06-28T10:05:55.463881 #28788]  INFO -- default-ubuntu-1204: Step 10/17 : RUN echo "Defaults !requiretty" >> /etc/sudoers
+I, [2018-06-28T10:05:55.464863 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.465090 #28788]  INFO -- default-ubuntu-1204:  ---> f04597bd94f1
+I, [2018-06-28T10:05:55.465509 #28788]  INFO -- default-ubuntu-1204: Step 11/17 : RUN mkdir -p /home/kitchen/.ssh
+I, [2018-06-28T10:05:55.466397 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.466638 #28788]  INFO -- default-ubuntu-1204:  ---> bdb416a661a2
+I, [2018-06-28T10:05:55.467192 #28788]  INFO -- default-ubuntu-1204: Step 12/17 : RUN chown -R kitchen /home/kitchen/.ssh
+I, [2018-06-28T10:05:55.468077 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.468353 #28788]  INFO -- default-ubuntu-1204:  ---> 510f747f2a63
+I, [2018-06-28T10:05:55.468704 #28788]  INFO -- default-ubuntu-1204: Step 13/17 : RUN chmod 0700 /home/kitchen/.ssh
+I, [2018-06-28T10:05:55.469565 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.469921 #28788]  INFO -- default-ubuntu-1204:  ---> 6664d9a376b7
+I, [2018-06-28T10:05:55.470130 #28788]  INFO -- default-ubuntu-1204: Step 14/17 : RUN touch /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:05:55.471166 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.471384 #28788]  INFO -- default-ubuntu-1204:  ---> 14fb7f46e6f6
+I, [2018-06-28T10:05:55.471972 #28788]  INFO -- default-ubuntu-1204: Step 15/17 : RUN chown kitchen /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:05:55.472810 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.473055 #28788]  INFO -- default-ubuntu-1204:  ---> 8703d96b149d
+I, [2018-06-28T10:05:55.473496 #28788]  INFO -- default-ubuntu-1204: Step 16/17 : RUN chmod 0600 /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:05:55.474424 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.474753 #28788]  INFO -- default-ubuntu-1204:  ---> de2e1c5f5764
+I, [2018-06-28T10:05:55.474963 #28788]  INFO -- default-ubuntu-1204: Step 17/17 : RUN echo ssh-rsa\ AAAAB3NzaC1yc2EAAAADAQABAAABAQCi944uT\+6Hc6TWy3VMqNHJbvA7cQ8lYyIXCrQMu7OBkb5qFVRrN/noBEmZOGe0JoerocU8slO1gW6yuHwFH3U4o7bGmf0sH6ByV8Svh\+bfUycuNRn9FdwljokE44HlzPIWVrLiBG\+AyNZHs5f7sSkt8khh5Ob3KgosDfcEZ/sT1ds17JH/nq/uUqPCzBle6SJ\+ek\+lSR0lVA1Hd61Vhg/ka0FCi33qepcjt9\+i0olpjheWzi7cLD2pbxK8610o7prUyvaBR6YESpozzPjztst0AquG5h8JxfwATvbNS5wDC/W9dccaor6rpcwJfH8EIkBNNyIrsX4f7UgJxep6RDu7\ kitchen_docker_key >> /home/kitchen/.ssh/authorized_keys
+I, [2018-06-28T10:05:55.475620 #28788]  INFO -- default-ubuntu-1204:  ---> Using cache
+I, [2018-06-28T10:05:55.475883 #28788]  INFO -- default-ubuntu-1204:  ---> dd029dad62f0
+I, [2018-06-28T10:05:55.477511 #28788]  INFO -- default-ubuntu-1204: Successfully built dd029dad62f0
+I, [2018-06-28T10:05:55.600532 #28788]  INFO -- default-ubuntu-1204: 73beb04d4cb572912187d5a0ae2a51819c92afe3519083c222d4aa6242fe6ffd
+I, [2018-06-28T10:05:55.988872 #28788]  INFO -- default-ubuntu-1204: 0.0.0.0:32778
+I, [2018-06-28T10:05:56.077192 #28788]  INFO -- default-ubuntu-1204: [SSH] Established
+I, [2018-06-28T10:05:56.078502 #28788]  INFO -- default-ubuntu-1204: Finished creating <default-ubuntu-1204> (0m0.97s).
+I, [2018-06-28T10:05:56.078661 #28788]  INFO -- default-ubuntu-1204: -----> Converging <default-ubuntu-1204>...
+I, [2018-06-28T10:05:56.079258 #28788]  INFO -- default-ubuntu-1204: Preparing files for transfer
+I, [2018-06-28T10:05:56.079465 #28788]  INFO -- default-ubuntu-1204: Preparing dna.json
+I, [2018-06-28T10:05:56.079778 #28788]  INFO -- default-ubuntu-1204: Resolving cookbook dependencies with Berkshelf 7.0.2...
+I, [2018-06-28T10:05:58.710350 #28788]  INFO -- default-ubuntu-1204: Removing non-cookbook files before transfer
+I, [2018-06-28T10:05:58.714196 #28788]  INFO -- default-ubuntu-1204: Preparing validation.pem
+I, [2018-06-28T10:05:58.715142 #28788]  INFO -- default-ubuntu-1204: Preparing client.rb
+I, [2018-06-28T10:05:58.783662 #28788]  INFO -- default-ubuntu-1204: -----> Installing Chef Omnibus (install only if missing)
+I, [2018-06-28T10:05:58.784484 #28788]  INFO -- default-ubuntu-1204: Downloading https://omnitruck.chef.io/install.sh to file /tmp/install.sh
+I, [2018-06-28T10:05:58.784962 #28788]  INFO -- default-ubuntu-1204: Trying wget...
+I, [2018-06-28T10:05:58.857940 #28788]  INFO -- default-ubuntu-1204: Download complete.
+I, [2018-06-28T10:05:58.869646 #28788]  INFO -- default-ubuntu-1204: ubuntu 12.04 x86_64
+I, [2018-06-28T10:05:58.870088 #28788]  INFO -- default-ubuntu-1204: Getting information for chef stable  for ubuntu...
+I, [2018-06-28T10:05:58.870452 #28788]  INFO -- default-ubuntu-1204: downloading https://omnitruck.chef.io/stable/chef/metadata?v=&p=ubuntu&pv=12.04&m=x86_64
+I, [2018-06-28T10:05:58.870804 #28788]  INFO -- default-ubuntu-1204:   to file /tmp/install.sh.15/metadata.txt
+I, [2018-06-28T10:05:58.871390 #28788]  INFO -- default-ubuntu-1204: trying wget...
+I, [2018-06-28T10:05:58.927067 #28788]  INFO -- default-ubuntu-1204: sha1	3eef728d8a096b6fce191216b51ba5fe4b064ea8
+I, [2018-06-28T10:05:58.927144 #28788]  INFO -- default-ubuntu-1204: sha256	df7201e5fb5113b8f68caa0cf4172dd7004282e947b449e0eeb094ea6e630227
+I, [2018-06-28T10:05:58.927164 #28788]  INFO -- default-ubuntu-1204: url	https://packages.chef.io/files/stable/chef/13.4.24/ubuntu/12.04/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T10:05:58.927615 #28788]  INFO -- default-ubuntu-1204: version	13.4.24
+I, [2018-06-28T10:05:58.929124 #28788]  INFO -- default-ubuntu-1204: downloaded metadata file looks valid...
+I, [2018-06-28T10:05:58.935143 #28788]  INFO -- default-ubuntu-1204: downloading https://packages.chef.io/files/stable/chef/13.4.24/ubuntu/12.04/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T10:05:58.935477 #28788]  INFO -- default-ubuntu-1204:   to file /tmp/install.sh.15/chef_13.4.24-1_amd64.deb
+I, [2018-06-28T10:05:58.935991 #28788]  INFO -- default-ubuntu-1204: trying wget...
+I, [2018-06-28T10:05:59.992116 #28788]  INFO -- default-ubuntu-1204: Comparing checksum with sha256sum...
+I, [2018-06-28T10:06:00.246788 #28788]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:06:00.247221 #28788]  INFO -- default-ubuntu-1204: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T10:06:00.247269 #28788]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:06:00.247293 #28788]  INFO -- default-ubuntu-1204: You are installing an omnibus package without a version pin.  If you are installing
+I, [2018-06-28T10:06:00.247312 #28788]  INFO -- default-ubuntu-1204: on production servers via an automated process this is DANGEROUS and you will
+I, [2018-06-28T10:06:00.247328 #28788]  INFO -- default-ubuntu-1204: be upgraded without warning on new releases, even to new major releases.
+I, [2018-06-28T10:06:00.247344 #28788]  INFO -- default-ubuntu-1204: Letting the version float is only appropriate in desktop, test, development or
+I, [2018-06-28T10:06:00.247360 #28788]  INFO -- default-ubuntu-1204: CI/CD environments.
+I, [2018-06-28T10:06:00.247840 #28788]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:06:00.247894 #28788]  INFO -- default-ubuntu-1204: WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING
+I, [2018-06-28T10:06:00.247918 #28788]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:06:00.247934 #28788]  INFO -- default-ubuntu-1204: Installing chef 
+I, [2018-06-28T10:06:00.247948 #28788]  INFO -- default-ubuntu-1204: installing with dpkg...
+I, [2018-06-28T10:06:00.285985 #28788]  INFO -- default-ubuntu-1204: Selecting previously unselected package chef.
+I, [2018-06-28T10:06:00.295311 #28788]  INFO -- default-ubuntu-1204: (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 9209 files and directories currently installed.)
+I, [2018-06-28T10:06:00.295911 #28788]  INFO -- default-ubuntu-1204: Unpacking chef (from .../chef_13.4.24-1_amd64.deb) ...
+I, [2018-06-28T10:06:04.955480 #28788]  INFO -- default-ubuntu-1204: Setting up chef (13.4.24-1) ...
+I, [2018-06-28T10:06:05.050197 #28788]  INFO -- default-ubuntu-1204: Thank you for installing Chef!
+I, [2018-06-28T10:06:05.136449 #28788]  INFO -- default-ubuntu-1204: Transferring files to <default-ubuntu-1204>
+I, [2018-06-28T10:06:10.026264 #28788]  INFO -- default-ubuntu-1204: Starting Chef Client, version 13.4.24
+I, [2018-06-28T10:06:10.798122 #28788]  INFO -- default-ubuntu-1204: Creating a new client identity for default-ubuntu-1204 using the validator key.
+I, [2018-06-28T10:06:10.857721 #28788]  INFO -- default-ubuntu-1204: resolving cookbooks for run list: ["apache::default"]
+I, [2018-06-28T10:06:11.035645 #28788]  INFO -- default-ubuntu-1204: Synchronizing Cookbooks:
+I, [2018-06-28T10:06:11.080887 #28788]  INFO -- default-ubuntu-1204:   - apache (0.1.5)
+I, [2018-06-28T10:06:11.089730 #28788]  INFO -- default-ubuntu-1204:   - php (6.0.0)
+I, [2018-06-28T10:06:11.097387 #28788]  INFO -- default-ubuntu-1204:   - build-essential (8.1.1)
+I, [2018-06-28T10:06:11.113069 #28788]  INFO -- default-ubuntu-1204:   - yum-epel (3.1.0)
+I, [2018-06-28T10:06:11.121999 #28788]  INFO -- default-ubuntu-1204:   - seven_zip (3.0.0)
+I, [2018-06-28T10:06:11.136847 #28788]  INFO -- default-ubuntu-1204:   - mingw (2.0.2)
+I, [2018-06-28T10:06:11.143902 #28788]  INFO -- default-ubuntu-1204:   - windows (4.3.2)
+I, [2018-06-28T10:06:11.144776 #28788]  INFO -- default-ubuntu-1204: Installing Cookbook Gems:
+I, [2018-06-28T10:06:11.180318 #28788]  INFO -- default-ubuntu-1204: Compiling Cookbooks...
+I, [2018-06-28T10:06:11.256817 #28788]  INFO -- default-ubuntu-1204: Converging 9 resources
+I, [2018-06-28T10:06:11.257791 #28788]  INFO -- default-ubuntu-1204: Recipe: apache::default
+I, [2018-06-28T10:06:16.209210 #28788]  INFO -- default-ubuntu-1204:   * execute[apt-get update -y] action run
+I, [2018-06-28T10:06:16.210297 #28788]  INFO -- default-ubuntu-1204:     - execute apt-get update -y
+I, [2018-06-28T10:06:24.341627 #28788]  INFO -- default-ubuntu-1204:   * apt_package[httpd] action install
+I, [2018-06-28T10:06:24.342715 #28788]  INFO -- default-ubuntu-1204:     - install version 2.2.22-1ubuntu1.11 of package apache2
+I, [2018-06-28T10:06:24.345248 #28788]  INFO -- default-ubuntu-1204:   * directory[/content/sites/chef1] action create
+I, [2018-06-28T10:06:24.347175 #28788]  INFO -- default-ubuntu-1204:     - create new directory /content/sites/chef1
+I, [2018-06-28T10:06:24.351338 #28788]  INFO -- default-ubuntu-1204:     - change mode from '' to '0755'
+I, [2018-06-28T10:06:24.354901 #28788]  INFO -- default-ubuntu-1204:   * template[/etc/apache2/sites-enabled/chef1.conf] action create
+I, [2018-06-28T10:06:24.356773 #28788]  INFO -- default-ubuntu-1204:     - create new file /etc/apache2/sites-enabled/chef1.conf
+I, [2018-06-28T10:06:24.357693 #28788]  INFO -- default-ubuntu-1204:     - update content in file /etc/apache2/sites-enabled/chef1.conf from none to a886db
+I, [2018-06-28T10:06:24.358582 #28788]  INFO -- default-ubuntu-1204:     --- /etc/apache2/sites-enabled/chef1.conf	2018-06-28 10:06:24.350919009 +0000
+I, [2018-06-28T10:06:24.359401 #28788]  INFO -- default-ubuntu-1204:     +++ /etc/apache2/sites-enabled/.chef-chef120180628-103-5zf4ut.conf	2018-06-28 10:06:24.350919009 +0000
+I, [2018-06-28T10:06:24.360235 #28788]  INFO -- default-ubuntu-1204:     @@ -1 +1,12 @@
+I, [2018-06-28T10:06:24.361033 #28788]  INFO -- default-ubuntu-1204:     +	NameVirtualHost *:80
+I, [2018-06-28T10:06:24.361815 #28788]  INFO -- default-ubuntu-1204:     +<VirtualHost *:80 > 
+I, [2018-06-28T10:06:24.362649 #28788]  INFO -- default-ubuntu-1204:     +	ServerName chef1.cheftraining.com 
+I, [2018-06-28T10:06:24.363433 #28788]  INFO -- default-ubuntu-1204:     +	DocumentRoot /content/sites/chef1 
+I, [2018-06-28T10:06:24.364213 #28788]  INFO -- default-ubuntu-1204:     +<Directory /content/sites/chef1 > 
+I, [2018-06-28T10:06:24.365061 #28788]  INFO -- default-ubuntu-1204:     +	Options Indexes FollowSymLinks MultiViews 
+I, [2018-06-28T10:06:24.365943 #28788]  INFO -- default-ubuntu-1204:     +	AllowOverride None 
+I, [2018-06-28T10:06:24.366482 #28788]  INFO -- default-ubuntu-1204:     +	Order allow,deny 
+I, [2018-06-28T10:06:24.367153 #28788]  INFO -- default-ubuntu-1204:     +	allow from all
+I, [2018-06-28T10:06:24.368038 #28788]  INFO -- default-ubuntu-1204:     +</Directory>
+I, [2018-06-28T10:06:24.368423 #28788]  INFO -- default-ubuntu-1204:     +</VirtualHost>
+I, [2018-06-28T10:06:24.369624 #28788]  INFO -- default-ubuntu-1204:     - change mode from '' to '0644'
+I, [2018-06-28T10:06:24.372353 #28788]  INFO -- default-ubuntu-1204:   * template[/content/sites/chef1/index.html] action create
+I, [2018-06-28T10:06:24.373934 #28788]  INFO -- default-ubuntu-1204:     - create new file /content/sites/chef1/index.html
+I, [2018-06-28T10:06:24.374799 #28788]  INFO -- default-ubuntu-1204:     - update content in file /content/sites/chef1/index.html from none to 8a499a
+I, [2018-06-28T10:06:24.375602 #28788]  INFO -- default-ubuntu-1204:     --- /content/sites/chef1/index.html	2018-06-28 10:06:24.366918890 +0000
+I, [2018-06-28T10:06:24.376417 #28788]  INFO -- default-ubuntu-1204:     +++ /content/sites/chef1/.chef-index20180628-103-1oi4r5z.html	2018-06-28 10:06:24.366918890 +0000
+I, [2018-06-28T10:06:24.377222 #28788]  INFO -- default-ubuntu-1204:     @@ -1 +1,9 @@
+I, [2018-06-28T10:06:24.378045 #28788]  INFO -- default-ubuntu-1204:     +<html>
+I, [2018-06-28T10:06:24.378852 #28788]  INFO -- default-ubuntu-1204:     +<body>
+I, [2018-06-28T10:06:24.379755 #28788]  INFO -- default-ubuntu-1204:     +<h1>chef 1 website cooking</h1>
+I, [2018-06-28T10:06:24.380654 #28788]  INFO -- default-ubuntu-1204:     +<h2>still cooking  </h2>
+I, [2018-06-28T10:06:24.381399 #28788]  INFO -- default-ubuntu-1204:     +<h3>oracle </h3>
+I, [2018-06-28T10:06:24.381950 #28788]  INFO -- default-ubuntu-1204:     +</body>
+I, [2018-06-28T10:06:24.382176 #28788]  INFO -- default-ubuntu-1204:     +</html>
+I, [2018-06-28T10:06:24.382673 #28788]  INFO -- default-ubuntu-1204:     +
+I, [2018-06-28T10:06:24.384176 #28788]  INFO -- default-ubuntu-1204:   * directory[/content/sites/chef2] action create
+I, [2018-06-28T10:06:24.385670 #28788]  INFO -- default-ubuntu-1204:     - create new directory /content/sites/chef2
+I, [2018-06-28T10:06:24.386824 #28788]  INFO -- default-ubuntu-1204:     - change mode from '' to '0755'
+I, [2018-06-28T10:06:24.389534 #28788]  INFO -- default-ubuntu-1204:   * template[/etc/apache2/sites-enabled/chef2.conf] action create
+I, [2018-06-28T10:06:24.391128 #28788]  INFO -- default-ubuntu-1204:     - create new file /etc/apache2/sites-enabled/chef2.conf
+I, [2018-06-28T10:06:24.391955 #28788]  INFO -- default-ubuntu-1204:     - update content in file /etc/apache2/sites-enabled/chef2.conf from none to afa2d0
+I, [2018-06-28T10:06:24.392760 #28788]  INFO -- default-ubuntu-1204:     --- /etc/apache2/sites-enabled/chef2.conf	2018-06-28 10:06:24.386918743 +0000
+I, [2018-06-28T10:06:24.393539 #28788]  INFO -- default-ubuntu-1204:     +++ /etc/apache2/sites-enabled/.chef-chef220180628-103-1gehory.conf	2018-06-28 10:06:24.386918743 +0000
+I, [2018-06-28T10:06:24.394346 #28788]  INFO -- default-ubuntu-1204:     @@ -1 +1,12 @@
+I, [2018-06-28T10:06:24.395127 #28788]  INFO -- default-ubuntu-1204:     +	NameVirtualHost *:80
+I, [2018-06-28T10:06:24.395928 #28788]  INFO -- default-ubuntu-1204:     +<VirtualHost *:80 > 
+I, [2018-06-28T10:06:24.396713 #28788]  INFO -- default-ubuntu-1204:     +	ServerName chef2.cheftraining.com 
+I, [2018-06-28T10:06:24.397503 #28788]  INFO -- default-ubuntu-1204:     +	DocumentRoot /content/sites/chef2 
+I, [2018-06-28T10:06:24.398506 #28788]  INFO -- default-ubuntu-1204:     +<Directory /content/sites/chef2 > 
+I, [2018-06-28T10:06:24.399430 #28788]  INFO -- default-ubuntu-1204:     +	Options Indexes FollowSymLinks MultiViews 
+I, [2018-06-28T10:06:24.400414 #28788]  INFO -- default-ubuntu-1204:     +	AllowOverride None 
+I, [2018-06-28T10:06:24.401173 #28788]  INFO -- default-ubuntu-1204:     +	Order allow,deny 
+I, [2018-06-28T10:06:24.401425 #28788]  INFO -- default-ubuntu-1204:     +	allow from all
+I, [2018-06-28T10:06:24.401927 #28788]  INFO -- default-ubuntu-1204:     +</Directory>
+I, [2018-06-28T10:06:24.402847 #28788]  INFO -- default-ubuntu-1204:     +</VirtualHost>
+I, [2018-06-28T10:06:24.403434 #28788]  INFO -- default-ubuntu-1204:     - change mode from '' to '0644'
+I, [2018-06-28T10:06:24.405781 #28788]  INFO -- default-ubuntu-1204:   * template[/content/sites/chef2/index.html] action create
+I, [2018-06-28T10:06:24.407261 #28788]  INFO -- default-ubuntu-1204:     - create new file /content/sites/chef2/index.html
+I, [2018-06-28T10:06:24.408169 #28788]  INFO -- default-ubuntu-1204:     - update content in file /content/sites/chef2/index.html from none to 95c8ff
+I, [2018-06-28T10:06:24.409012 #28788]  INFO -- default-ubuntu-1204:     --- /content/sites/chef2/index.html	2018-06-28 10:06:24.402918624 +0000
+I, [2018-06-28T10:06:24.409846 #28788]  INFO -- default-ubuntu-1204:     +++ /content/sites/chef2/.chef-index20180628-103-1280qkh.html	2018-06-28 10:06:24.402918624 +0000
+I, [2018-06-28T10:06:24.410687 #28788]  INFO -- default-ubuntu-1204:     @@ -1 +1,9 @@
+I, [2018-06-28T10:06:24.411489 #28788]  INFO -- default-ubuntu-1204:     +<html>
+I, [2018-06-28T10:06:24.412450 #28788]  INFO -- default-ubuntu-1204:     +<body>
+I, [2018-06-28T10:06:24.413105 #28788]  INFO -- default-ubuntu-1204:     +<h1>chef 2 website cooking</h1>
+I, [2018-06-28T10:06:24.413808 #28788]  INFO -- default-ubuntu-1204:     +<h2>still cooking  </h2>
+I, [2018-06-28T10:06:24.414544 #28788]  INFO -- default-ubuntu-1204:     +<h3>oracle </h3>
+I, [2018-06-28T10:06:24.415146 #28788]  INFO -- default-ubuntu-1204:     +</body>
+I, [2018-06-28T10:06:24.415422 #28788]  INFO -- default-ubuntu-1204:     +</html>
+I, [2018-06-28T10:06:24.416262 #28788]  INFO -- default-ubuntu-1204:     +
+I, [2018-06-28T10:06:24.478830 #28788]  INFO -- default-ubuntu-1204:   * service[httpd] action enable (up to date)
+I, [2018-06-28T10:06:24.556936 #28788]  INFO -- default-ubuntu-1204:   * service[httpd] action start
+I, [2018-06-28T10:06:24.558051 #28788]  INFO -- default-ubuntu-1204:     - start service service[httpd]
+I, [2018-06-28T10:06:26.690246 #28788]  INFO -- default-ubuntu-1204:   * service[httpd] action restart
+I, [2018-06-28T10:06:26.691388 #28788]  INFO -- default-ubuntu-1204:     - restart service service[httpd]
+I, [2018-06-28T10:06:26.759684 #28788]  INFO -- default-ubuntu-1204: 
+I, [2018-06-28T10:06:26.760379 #28788]  INFO -- default-ubuntu-1204: Running handlers:
+I, [2018-06-28T10:06:26.760769 #28788]  INFO -- default-ubuntu-1204: Running handlers complete
+I, [2018-06-28T10:06:26.761508 #28788]  INFO -- default-ubuntu-1204: Chef Client finished, 10/11 resources updated in 16 seconds
+I, [2018-06-28T10:06:26.785878 #28788]  INFO -- default-ubuntu-1204: Downloading files from <default-ubuntu-1204>
+I, [2018-06-28T10:06:26.790428 #28788]  INFO -- default-ubuntu-1204: Finished converging <default-ubuntu-1204> (0m30.71s).
+I, [2018-06-28T10:06:26.790846 #28788]  INFO -- default-ubuntu-1204: -----> Setting up <default-ubuntu-1204>...
+I, [2018-06-28T10:06:26.791529 #28788]  INFO -- default-ubuntu-1204: Finished setting up <default-ubuntu-1204> (0m0.00s).
+I, [2018-06-28T10:06:26.791674 #28788]  INFO -- default-ubuntu-1204: -----> Verifying <default-ubuntu-1204>...
+I, [2018-06-28T10:06:27.078312 #28788]  INFO -- default-ubuntu-1204: Loaded tests from {:path=>".home.ec2-user.chef-repo.cookbooks.apache.test.integration.default"} 
+I, [2018-06-28T10:06:27.679886 #28788]  INFO -- default-ubuntu-1204: Finished verifying <default-ubuntu-1204> (0m0.89s).
+I, [2018-06-28T10:06:27.680327 #28788]  INFO -- default-ubuntu-1204: -----> Destroying <default-ubuntu-1204>...
+I, [2018-06-28T10:06:27.790740 #28788]  INFO -- default-ubuntu-1204: UID                 PID                 PPID                C                   STIME               TTY                 TIME                CMD
+I, [2018-06-28T10:06:27.790820 #28788]  INFO -- default-ubuntu-1204: root                29036               29022               0                   10:05               ?                   00:00:00            /usr/sbin/sshd -D -o UseDNS=no -o UsePAM=no -o PasswordAuthentication=yes -o UsePrivilegeSeparation=no -o PidFile=/tmp/sshd.pid
+I, [2018-06-28T10:06:27.790852 #28788]  INFO -- default-ubuntu-1204: root                29097               29036               0                   10:05               ?                   00:00:00            sshd: kitchen@notty
+I, [2018-06-28T10:06:27.790876 #28788]  INFO -- default-ubuntu-1204: root                29986               29036               0                   10:06               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:06:27.790898 #28788]  INFO -- default-ubuntu-1204: 33                  29988               29986               0                   10:06               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:06:27.790919 #28788]  INFO -- default-ubuntu-1204: 33                  29989               29986               0                   10:06               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:06:27.790940 #28788]  INFO -- default-ubuntu-1204: 33                  29990               29986               0                   10:06               ?                   00:00:00            /usr/sbin/apache2 -k start
+I, [2018-06-28T10:06:27.790964 #28788]  INFO -- default-ubuntu-1204: root                30045               29036               1                   10:06               ?                   00:00:00            sshd: kitchen@notty
+I, [2018-06-28T10:06:28.071155 #28788]  INFO -- default-ubuntu-1204: 73beb04d4cb572912187d5a0ae2a51819c92afe3519083c222d4aa6242fe6ffd
+I, [2018-06-28T10:06:28.534630 #28788]  INFO -- default-ubuntu-1204: 73beb04d4cb572912187d5a0ae2a51819c92afe3519083c222d4aa6242fe6ffd
+I, [2018-06-28T10:06:28.547521 #28788]  INFO -- default-ubuntu-1204: Finished destroying <default-ubuntu-1204> (0m0.87s).
+I, [2018-06-28T10:06:28.548037 #28788]  INFO -- default-ubuntu-1204: Finished testing <default-ubuntu-1204> (0m34.28s).

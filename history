@@ -1,0 +1,739 @@
+pwd
+cd
+ls-ltr
+ls -ltr
+unzip chef-starter.zip 
+cd chef-repo/
+ls
+cd .chef
+ls
+cat knife.rb
+cerl -L https://www.opscode.com/chef/install.sh |bash
+curl -L https://www.opscode.com/chef/install.sh |bash
+curl https://omnitruck.chef.io/install.sh|bash -s -- -p chefdk
+curl https://omnitruck.chef.io/install.sh|sudo bash -s -- -p chefdk
+pwd
+cd chef-repo/cookbooks/
+ls -ltr
+chef generate cookbook motd 
+ curl https://omnitruck.chef.io/install.sh|sudo bash -s -- -p chefdk
+chef generate cookbook motd 
+pwd
+which chef
+ curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -P chefdk
+chef
+chef generate cookbook motd 
+ls -ltr
+motd
+cd motd
+ls
+ls -ltr
+cd recipes/
+ls
+cat default.rb 
+cd ..
+ls
+ls
+hostname workstation.virag.com
+vi key.pem
+cd chef-repo/
+ls
+vi key.pem
+vi key.pem
+cd chef-repo/
+ls
+knif      
+knife
+knife bootstrap 50.70.98.237 -x ec2-user --sudo -i key.pem -Nb linuxnode 
+knife bootstrap 50.70.98.237 -x ec2-user --sudo -i key.pem -N linuxnode 
+knife bootstrap 52.70.98.237 -x ec2-user --sudo -i key.pem -N linuxnode 
+ls
+ssh 52.70.98.237
+cd chef-repo/
+ls
+ssh 52.70.98.237
+ssh -i ./key.pem 52.70.98.237
+ls
+chmod 600 key.pem 
+ssh -i ./key.pem 52.70.98.237
+ssh -i ./key.pem ec2-user@52.70.98.237
+ls
+cd cookbooks/
+ls
+cd motd
+ls
+ls -ltr
+mkdir templates
+cd templates/
+mkdir default 
+cd default/
+vi motd.erb
+pwd
+cd ..
+ls
+cd ..
+ls
+mkdir attributes 
+cd attributes/
+ls
+vi default.rb
+vi default.rb
+vi default.rb
+cd /home/ec2-user/chef-repo/cookbooks/motd/templates/default
+ls
+vi motd.erb
+cd -
+ls
+pwd
+pwd
+cd ../
+ls
+ls --ltr
+ls -ltr
+cd recipes
+ls
+vi default.rb 
+cd /home/ec2-user/chef-repo/cookbooks/motd/attributes
+ls
+cd ..
+ls
+cd ..
+ls
+cd motd
+ls
+cd recipes
+ls
+vi default.rb 
+clear
+ls
+knif cookbook upload motd 
+knife cookbook upload motd 
+ls
+vi default.rb 
+knife cookbook upload motd 
+cd /home/ec2-user/chef-repo/cookbooks/motd/attributes
+ls
+cd cd /home/ec2-user/chef-repo/cookbooks/
+ls
+ls
+cd cd /home/ec2-user/chef-repo/cookbooks/
+cd /home/ec2-user/chef-repo/cookbooks/
+ls
+cd motd
+ls
+knife node run_list add linuxnode "recipe[motd]" 
+ssh -i ./key.pem ec2-user@52.70.98.237
+pwd
+cd ..
+ls
+cd ..
+ls
+ssh -i ./key.pem ec2-user@52.70.98.237
+cd -
+ls
+cd motd
+ls
+cd recipes
+ls
+vi default.rb
+knife node run_list add linuxnode "recipe[motd]" 
+cd ../..
+ls
+cd ..
+ls
+ssh -i ./key.pem ec2-user@52.70.98.237
+pwd
+cd cookbooks/motd/recipes/
+ls
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+knife cookbook upload motd 
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi default.rb
+knife cookbook upload apache 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi default.rb
+knife cookbook upload motd 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+ls
+cd ..
+ls
+pwd
+cd ..
+ls
+pwd
+cd ..
+ls
+pwd
+chef generate cookbook apache
+pwd
+ls
+cd apache
+ls
+ls
+ls -ltr
+cd recipes
+ls
+cd default.rb
+vi default.rb
+knife node run_list add linuxnode "recipe[apache]" 
+knife cookbook upload apache
+pwd
+cd ..
+ls
+pwd
+cd ..
+ls
+ls
+cd cookbooks/
+ls
+cd ..
+ls
+mv apache cookbooks/
+knife node run_list add linuxnode "recipe[apache]" 
+knife cookbook upload apache
+pwd
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+pwd
+cd cookbooks/
+pwd
+pwd
+pwd
+cd apache/
+ls
+pwd
+mkdir attributes 
+cd attributes/
+ls
+vi default.rp
+mv default.rp default.rb
+ls
+vi default.rb
+cd ..
+ls
+ls -ltr
+cd recipes
+ls
+cd ..
+ls
+cd attributes/
+ls
+vi default.rb 
+vi default.rb 
+cd ../recipes/
+ls
+vi default.rb 
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+pwd
+cd ..
+mkdir templates
+cd templates/
+ls
+default
+mkdir default
+cd default
+vi vhost.erb
+pwd
+ls
+cd ..
+ls
+cd ..
+ls
+pwd
+ls
+cd recipes/
+ls
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+vi default.rb 
+pwd
+ls
+cd /home/ec2-user/chef-repo/cookbooks/apache/templates/default
+ls
+cat vhost.erb
+cd -
+ls
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi /var/chef/cache/cookbooks/apache/recipes/default.rb
+ls
+vi default.rb 
+cd /home/ec2-user/chef-repo/cookbooks/apache/templates/default
+ls
+cat vhost.erb 
+vi vhost.erb 
+cd -
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi vhost.erb 
+cd -
+vi vhost.erb 
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+vi vhost.erb 
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+ls
+vi *
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+pwd
+vi vhost.erb 
+knife cookbook upload apache
+pwd
+cd ../..
+ls
+cd template 
+ls
+cd templates/
+ls
+cd default/
+ls
+cd ../..
+ls
+cd attributes/
+ls
+vi default.rb 
+pwd
+cd ../..
+ls
+cd apache/
+ls
+cd templates/
+ls
+cd default/
+ls
+vi index.html.erb
+cd ..
+ls
+cd ..
+ls
+cd recipes/
+ls
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+ls
+cat default.rb
+p
+ls
+pwd
+cd ..
+ls
+cd attributes/
+ls
+vi default.rb 
+pwd
+cd ..
+ls
+cd templates/
+ls
+cd default/
+l
+vi vhost.erb 
+vi /etc/hosts
+curl chef1.cheftraining.com
+curl chef2.cheftraining.com
+vi /etc/hosts
+pwd
+ls
+cd ../../..
+ls
+chef generate cookbook php
+cd php
+ls
+ls
+cd recipes/
+ls
+vi default.rb 
+vi default.rb 
+vi default.rb 
+knife cookbook upload php
+cd ..
+ls
+pwd
+vi metadata.rb
+pwd
+cd ..
+ls
+cd apache/
+ls
+vi metadata.rb
+ls
+cd recipes/
+ls
+vi default.rb 
+knife cookbook upload apache
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@52.70.98.237
+ls
+cd /home/ec2-user/chef-repo/
+vi keyu.pem
+ssh -i /home/ec2-user/chef-repo/keyu.pem ec2-user@54.218.70.118 
+sudo su
+pwd
+ls
+cd chef-repo/
+ls
+cd cookbooks
+ls
+cd apache
+ls
+cd recipes/
+ls
+vi default.rb 
+pwd
+ls
+cd ../attributes/
+ls
+vi default.rb 
+cd -
+ls
+vi default.rb 
+vi default.rb 
+cd -
+vi default.rb 
+cd -
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+knif node run_list add unbutunode "recipe[apache]"
+knife node run_list add unbutunode "recipe[apache]"
+knife node run_list add unbuntunode "recipe[apache]"
+knife node run_list add ubuntunode "recipe[apache]"
+ls
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+cd -
+ls
+vi default.rb 
+cd -
+knife cookbook upload apache
+vi default.rb 
+knife cookbook upload apache
+vi default.rb 
+cd -
+ls
+vi default.rb 
+cd -
+vi default.rb 
+knife cookbook upload apache
+pwd
+cat default.rb 
+cd -
+pwd
+cat default.rb 
+cd -
+ls
+cd ../templates/
+ls
+cd -
+cd ../templates/default/
+ls
+cat ^
+cat *
+pwd
+pwd
+/home/ec2-user/chef-repo
+cd /home/ec2-user/chef-repo
+knif bootstrap 54.218.70.118 -x ec2-user --sudo -i keyu.pem -N ubuntunode 
+knife bootstrap 54.218.70.118 -x ec2-user --sudo -i keyu.pem -N ubuntunode 
+chmod 600 keyu.pem 
+knife bootstrap 54.218.70.118 -x ec2-user --sudo -i keyu.pem -N ubuntunode 
+knife bootstrap 54.218.70.118 -x ubuntu  --sudo -i keyu.pem -N ubuntunode 
+knife bootstrap 54.218.70.118 -x ubuntu --sudo -i keyu.pem -N ubuntunode 
+ssh -i /home/ec2-user/chef-repo/keyu.pem ubuntu@54.218.70.118 
+ssh -i /home/ec2-user/chef-repo/keyu.pem ubuntu@54.218.70.118 
+ls
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@35.173.178.94
+cd 
+ls
+cd -
+ls
+cd chef-repo/
+ls
+mkdir data_bags 
+cd data_bags/
+ls
+mkdir users group
+cd users
+l
+vi admin.jason
+pwd
+ls
+cd ../group/
+ls
+vi sudoers.json
+cat sudoers.json
+pd
+pwd
+cat ../users/admin.jason 
+knife data bag create users
+knif data bag create groups 
+knife data bag create groups 
+cd ../..
+ls
+knife data bag from file users admin.json 
+cd data_bags/users/
+ls
+mv admin.jason  admin.json
+cd -
+knife data bag from file users admin.json 
+cd -
+vi admin.json 
+cd -
+cd -
+vi admin.json 
+cd -
+knife data bag from file users admin.json 
+ knife data bag from file groups data_bags/group/sudoers.json 
+vi data_bags/group/sudoers.json
+ knife data bag from file groups data_bags/group/sudoers.json 
+vi /etc/passwd
+vi /etc/group
+chef generate cookbook users
+cd users
+ls
+cd recipes/
+ls -ltr
+vi default.rb 
+knife cookbook upload users 
+cd ../..
+ls
+knife cookbook upload users 
+ls
+cd data_bags
+ls
+cd users/
+ls
+cd ..
+ls
+cd ..
+ls
+cd data_bags/
+ls
+ls
+cd users
+ls
+cd ..
+ls
+cd ..
+ls
+cd cookbooks/
+ls
+ls
+find ./ -name users
+cd ..
+ls
+mv users cookbooks
+knife cookbook upload users 
+history
+history|egrep -v "ls|cd|cat|pwd"
+pwd
+cat /etc/chef/client.rp
+cat  /home/ec2-user//chef-repo/.chef//knife.rb 
+cd cookbooks/rec*
+cd cookbooks/users/recipes/
+ls
+vi default.rb
+knife cookbook upload users 
+openssl passwd -1 "12345"
+pwd
+ls
+cd ..
+ls
+ls -ltr
+pwd
+cd ..
+ls
+cd ..
+ls
+cd data_bags/
+cd ..
+ls
+cd cookbooks/
+ls
+cd  users
+cd recipes/
+vi groups.rp
+mv groups.rp groups.rb
+pwd
+vi default.rb 
+cat groups.rb
+cat default.rb
+
+knife cookbook upload users 
+cat groups.rb
+cat default.rb
+knife cookbook upload users 
+vi groups.rb 
+ls
+vi default.rb 
+ls
+cd ../..
+ls
+cd ..
+ls
+cd data_bags/
+ls
+cd users/
+ls
+vi admin.json 
+cd..
+;s
+cd ../..
+ls
+cd cookbooks/
+ls
+cd users/
+ls
+cd recipes/
+ls
+vi default.rb 
+knife cookbook upload users 
+cd ../../
+ls
+cd ../data_bags/group/
+ls
+cd vi *
+vi sudoers.json 
+cd ../..
+nife data bag from file groups data_bags/group/sudoers.json
+knife data bag from file groups data_bags/group/sudoers.json
+cd cookbooks/
+ls
+cd users/recipes/
+ls
+vi default.rb 
+
+vi default.rb 
+vi groups.rb 
+vi groups.rb 
+knife cookbook upload users 
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@35.173.178.94
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@35.173.178.94
+knif data bag create mysecrets 
+knife data bag create mysecrets 
+cd chef-repo/
+ls
+cd data_bags
+ls
+knife data bag create mysecrets 
+pwd
+openssl rand -base64 512 > /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+knife data bag create mysecrete oracletraining --secrete-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+knife data bag create mysecrete oracletraining -- secrete-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+export EDITOR=vi 
+knife data bag create mysecrete oracletraining -- secrete-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+ls -ltr
+knife data bag create mysecrete oracletraining -- secrete-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+knife data bag create mysecrete oracletraining --secrete-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+knife data bag create mysecrete oracletraining --secret-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+knife data bag create mysecrete oracletraining --secret-file /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key
+cd ..
+ls
+cd cookbooks/
+ls
+chef generate cookbook databagtest
+ls
+cd databagtest/recipes/
+vi default.rb 
+cd ..
+ls
+mkdir templates 
+mkdir default 
+cd default/
+vi default.erb
+cat default.erb 
+pwd
+cd ../recipes/
+ls
+cat default.rb 
+pwd
+cd ..
+ls
+cd ..
+ls
+knife cookbook upload databagtest
+cd /home/ec2-user/chef-repo/cookbooks/databagtest/recipes
+ls
+vi default.rb
+knife cookbook upload databagtest
+ssh -i /home/ec2-user/chef-repo/key.pem ec2-user@35.173.178.94
+scp -i /home/ec2-user/chef-repo/key.pem /home/ec2-user/chef-repo/.chef/encrypted_data_bag_key ec2-user@35.173.178.94:/tmp
+cd /home/ec2-user/chef-repo/cookbooks/databagtest/recipes
+vi default.rb 
+ knife cookbook upload databagtest
+vi default.rb 
+ knife cookbook upload databagtest
+vi default.rb 
+ knife cookbook upload databagtest
+vi default.rb 
+ knife cookbook upload databagtest
+vi default.rb 
+cd ../templates/
+ls
+pwd
+ls -ltr
+mkdir default
+ls
+cd ..
+ls
+cd ..
+ls
+find ./ -name data*.erb
+cd ..
+ls
+find ./ -name data*.erb
+find ./ -name *.erb
+cd /home/ec2-user/chef-repo/cookbooks/databagtest/default
+ls
+mv * ../templates/default/
+ knife cookbook upload databagtest
+pwd
+ls
+cd ../templates/default/
+pwd
+ls
+mv default.erb  databag.erb
+ knife cookbook upload databagtest
+pwd
+cat databag.erb 
+ssh -i /home/ec2-user/chef-repo/keyu.pem ubuntu@54.218.70.118 
+cd chef-repo/
+ls
+ls -ltr
+cd cookbooks/
+ls
